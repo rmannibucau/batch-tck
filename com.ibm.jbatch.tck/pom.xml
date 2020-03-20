@@ -75,6 +75,12 @@
             <groupId>xmlunit</groupId>
             <artifactId>xmlunit</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.6.0</version>
+        </dependency>
     </dependencies>
 
     <pluginRepositories>
@@ -242,6 +248,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                       <skipTests>true</skipTests>
+                    <systemPropertyVariables>
+                        <junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
+                    </systemPropertyVariables>
                 </configuration>
               </plugin>
         </plugins>
